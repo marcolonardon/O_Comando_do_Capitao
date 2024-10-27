@@ -1,0 +1,1 @@
+C:\O_Comando_do_Capitao\OComandoDoCapitao\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\Debug\4g1j1i50\obj\arm64-v8a

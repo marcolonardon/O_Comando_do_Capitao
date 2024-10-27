@@ -1,0 +1,1 @@
+C:\O_Comando_do_Capitao\OComandoDoCapitao\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\81466496\obj\arm64-v8a
