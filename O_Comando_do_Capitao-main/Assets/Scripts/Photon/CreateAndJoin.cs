@@ -34,7 +34,7 @@ public class CreateAndJoin : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("cena01");
+        PhotonNetwork.LoadLevel("GameScene");
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
