@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7eec269eeca88574f83080cd8ee57219
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258142
+  packageName: 2D Pirate Cove | Treasure Hunt Harbor | Tropical Buccaneer Cove
+  packageVersion: 1.0
+  assetPath: Assets/GamedevDreamer/Prefabs/Collectibles/CannonHolder.prefab
+  uploadId: 606127

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 45fb5b15fa0c7d64aa7ba263f0c00408
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258142
+  packageName: 2D Pirate Cove | Treasure Hunt Harbor | Tropical Buccaneer Cove
+  packageVersion: 1.0
+  assetPath: Assets/GamedevDreamer/Prefabs/Collectibles/PipeHolder.prefab
+  uploadId: 606127

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5ca3b52da25a53e41ad9eef87a084c85
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 287229
+  packageName: 2D Cute Characters | Customization system | UI
+  packageVersion: 1.0
+  assetPath: Assets/tarsakura/2DCuteCharacters/Sample Scenes/CustomizeCharacter/Character.renderTexture
+  uploadId: 669853

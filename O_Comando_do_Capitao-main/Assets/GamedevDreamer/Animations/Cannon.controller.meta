@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 44c0e21dc05c2564f93554f51494cbce
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258142
+  packageName: 2D Pirate Cove | Treasure Hunt Harbor | Tropical Buccaneer Cove
+  packageVersion: 1.0
+  assetPath: Assets/GamedevDreamer/Animations/Cannon.controller
+  uploadId: 606127

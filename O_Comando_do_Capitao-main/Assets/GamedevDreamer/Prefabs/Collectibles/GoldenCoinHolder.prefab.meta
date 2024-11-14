@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e004b7186cd8398478e9592d1e40f623
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258142
+  packageName: 2D Pirate Cove | Treasure Hunt Harbor | Tropical Buccaneer Cove
+  packageVersion: 1.0
+  assetPath: Assets/GamedevDreamer/Prefabs/Collectibles/GoldenCoinHolder.prefab
+  uploadId: 606127

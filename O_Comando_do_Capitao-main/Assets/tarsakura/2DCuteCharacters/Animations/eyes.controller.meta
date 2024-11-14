@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1d1ae5e69236cd24ca1d4a0cf57c02e7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 287229
+  packageName: 2D Cute Characters | Customization system | UI
+  packageVersion: 1.0
+  assetPath: Assets/tarsakura/2DCuteCharacters/Animations/eyes.controller
+  uploadId: 669853

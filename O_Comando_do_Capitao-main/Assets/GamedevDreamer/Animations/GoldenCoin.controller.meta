@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9fef73c5188e4904fb3f4a19021b00a3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 258142
+  packageName: 2D Pirate Cove | Treasure Hunt Harbor | Tropical Buccaneer Cove
+  packageVersion: 1.0
+  assetPath: Assets/GamedevDreamer/Animations/GoldenCoin.controller
+  uploadId: 606127
