@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class CaptainMenuControl : MonoBehaviourPunCallbacks
 {
+    public GameObject Background;
     public GameObject CaptainCharacter;
     public GameObject customizationMenu; // Referência ao GameObject do menu de personalização
     public GameObject roleText;
@@ -35,6 +36,7 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
     {
         CaptainCharacter.SetActive(false);
         roleText.SetActive(true);
+        Background.SetActive(true); 
 
         if (customizationMenu == null)
         {

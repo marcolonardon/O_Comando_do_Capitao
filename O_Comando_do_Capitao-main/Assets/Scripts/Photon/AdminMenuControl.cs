@@ -2,6 +2,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class AdminMenuControl : MonoBehaviourPunCallbacks
@@ -10,7 +11,7 @@ public class AdminMenuControl : MonoBehaviourPunCallbacks
     public GameObject targetObject; // O GameObject que será mostrado/ocultado apenas para os demais jogadores
     public GameObject WaitingForStart;
     public TMP_Text CaptainNameText;
-    public TMP_InputField playerNameInput; // Campo para inserir o nome do jogador
+    public InputField playerNameInput; // Campo para inserir o nome do jogador
     public TMP_Dropdown playerGenderDropdown; // Dropdown para selecionar o sexo do jogador
     public TMP_Dropdown playersListDropdown; // Dropdown para exibir todos os jogadores adicionados manualmente
     public TMP_Text captainText; // Texto que exibe o capitão atual

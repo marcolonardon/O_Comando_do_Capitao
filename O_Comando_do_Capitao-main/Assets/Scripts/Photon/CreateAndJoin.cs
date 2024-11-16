@@ -2,11 +2,12 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using UnityEngine.UI;
 
 public class CreateAndJoin : MonoBehaviourPunCallbacks
 {
-    public TMP_InputField input_Create;
-    public TMP_InputField Input_Join;
+    public InputField input_Create;
+    public InputField Input_Join;
     public GameObject errorPopup;
     public TMP_Text errorText;
 
