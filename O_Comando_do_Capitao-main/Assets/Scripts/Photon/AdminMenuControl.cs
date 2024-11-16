@@ -9,7 +9,6 @@ public class AdminMenuControl : MonoBehaviourPunCallbacks
     public GameObject adminMenu; // Referência ao painel do menu de administração
     public GameObject targetObject; // O GameObject que será mostrado/ocultado apenas para os demais jogadores
     public GameObject WaitingForStart;
-    public TMP_Text roleText; // Texto que exibe o papel do jogador (Host, Capitão, Marujo, etc.)
     public TMP_Text CaptainNameText;
     public TMP_InputField playerNameInput; // Campo para inserir o nome do jogador
     public TMP_Dropdown playerGenderDropdown; // Dropdown para selecionar o sexo do jogador
@@ -34,7 +33,7 @@ public class AdminMenuControl : MonoBehaviourPunCallbacks
         if (photonView == null) Debug.LogError("photonView não está atribuído!");
         if (adminMenu == null) Debug.LogError("adminMenu não está atribuído!");
         if (targetObject == null) Debug.LogError("targetObject não está atribuído!");
-        if (roleText == null) Debug.LogError("roleText não está atribuído!");
+        //if (roleText == null) Debug.LogError("roleText não está atribuído!");
         if (playerNameInput == null) Debug.LogError("playerNameInput não está atribuído!");
         if (playerGenderDropdown == null) Debug.LogError("playerGenderDropdown não está atribuído!");
         if (playersListDropdown == null) Debug.LogError("playersListDropdown não está atribuído!");
@@ -52,22 +51,22 @@ public class AdminMenuControl : MonoBehaviourPunCallbacks
 
     private void AssignRole()
     {
-        int playerIndex = PhotonNetwork.PlayerList.Length;
-
-        if (playerIndex == 1) roleText.text = "Host";
-        else if (playerIndex == 2) roleText.text = "Capitão";
-        else if (playerIndex == 3) roleText.text = "Marujo";
-        else roleText.text = "Espectador";
-
-        // Mostra o WaitingForStart apenas para Capitão e Marujo
-        if (roleText.text == "Capitão" || roleText.text == "Marujo")
-        {
-            waitingForStart.SetActive(true);
-        }
-        else
-        {
-            waitingForStart.SetActive(false);
-        }
+     //  int playerIndex = PhotonNetwork.PlayerList.Length;
+     //
+     //  if (playerIndex == 1) roleText.text = "Host";
+     //  else if (playerIndex == 2) roleText.text = "Capitão";
+     //  else if (playerIndex == 3) roleText.text = "Marujo";
+     //  else roleText.text = "Espectador";
+     //
+     //  // Mostra o WaitingForStart apenas para Capitão e Marujo
+     //  if (roleText.text == "Capitão" || roleText.text == "Marujo")
+     //  {
+     //      waitingForStart.SetActive(true);
+     //  }
+     //  else
+     //  {
+     //      waitingForStart.SetActive(false);
+     //  }
     }
 
     public void ToggleObjectVisibility()
@@ -181,11 +180,7 @@ public class AdminMenuControl : MonoBehaviourPunCallbacks
         photonView.RPC("DisplayCaptain", RpcTarget.All, captainName);
         Debug.Log("Capitão da rodada: " + captainName);
 
-        // Desativa o WaitingForStart quando o capitão for sorteado
-        if (captainName == roleText.text)
-        {
-            waitingForStart.SetActive(false); // Desativa para o Capitão
-        }
+        waitingForStart.SetActive(false);
     }
 
     [PunRPC]

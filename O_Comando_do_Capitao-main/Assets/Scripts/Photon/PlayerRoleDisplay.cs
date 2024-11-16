@@ -27,6 +27,6 @@ public class PlayerRoleDisplay : MonoBehaviourPunCallbacks
     // Callback que é chamado quando o Master Client muda (por exemplo, se o host sair e outro jogador se tornar o novo host)
     public override void OnMasterClientSwitched(Photon.Realtime.Player newMasterClient)
     {
-        UpdateRoleText();
+        //UpdateRoleText();
     }
 }

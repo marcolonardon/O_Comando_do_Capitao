@@ -7,11 +7,31 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
     public GameObject CaptainCharacter;
     public GameObject customizationMenu; // Referência ao GameObject do menu de personalização
     public GameObject roleText;
+    public GameObject PlayButton;
     public Button toggleCustomizationButton; // Referência ao botão para ativar/desativar o menu de personalização
     public GameObject InitialButton;
     private bool isCustomizationMenuActive = false; // Estado inicial do menu
 
+    // Variável para armazenar o ActorNumber do capitão
+    private int captainActorNumber;
+
     void Start()
+    {
+        SetCaptain();
+        SetUI();
+    }
+
+    private void SetCaptain()
+    {
+        // Verifique se há ao menos dois jogadores conectados para definir o capitão como o segundo jogador
+        if (PhotonNetwork.PlayerList.Length >= 2)
+        {
+            // Define o ActorNumber do capitão como o segundo jogador na lista
+            captainActorNumber = PhotonNetwork.PlayerList[1].ActorNumber;
+        }
+    }
+
+    private void SetUI()
     {
         CaptainCharacter.SetActive(false);
         roleText.SetActive(true);
@@ -20,6 +40,10 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
         {
             Debug.LogError("O GameObject customizationMenu não está atribuído!");
         }
+        else
+        {
+            customizationMenu.SetActive(false);
+        }
 
         if (toggleCustomizationButton == null)
         {
@@ -27,11 +51,14 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
         }
         else
         {
-            // Adiciona o listener para chamar o método ToggleCustomizationMenu quando o botão é pressionado
             toggleCustomizationButton.onClick.AddListener(ToggleCustomizationMenu);
         }
 
-        // Verifica se o jogador atual é o capitão
+        if (PlayButton != null)
+        {
+            PlayButton.SetActive(false);
+        }
+
         if (IsCaptain())
         {
             customizationMenu.SetActive(isCustomizationMenuActive); // Exibe o menu se for o capitão
@@ -39,6 +66,7 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
         else
         {
             customizationMenu.SetActive(false); // Esconde o menu para todos os outros jogadores
+            CaptainCharacter.SetActive(false);
         }
     }
 
@@ -50,6 +78,7 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
             isCustomizationMenuActive = !isCustomizationMenuActive;
             customizationMenu.SetActive(isCustomizationMenuActive);
             CaptainCharacter.SetActive(true);
+            PlayButton.SetActive(!isCustomizationMenuActive);
             Debug.Log("Menu de personalização " + (isCustomizationMenuActive ? "ativado" : "desativado"));
         }
         else
@@ -63,8 +92,9 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
     // Método que verifica se o jogador atual é o capitão
     private bool IsCaptain()
     {
-        int playerIndex = PhotonNetwork.PlayerList.Length; // Ou outro método que defina o papel do capitão
-        return playerIndex == 2; // Exemplo: assume que o capitão é o segundo jogador conectado
+        bool isCaptain = PhotonNetwork.LocalPlayer.ActorNumber == captainActorNumber;
+        Debug.LogWarning("Player ID: " + PhotonNetwork.LocalPlayer.ActorNumber + " | Capitão ID: " + captainActorNumber + " | É Capitão: " + isCaptain);
+        return isCaptain;
     }
 
     private void TurnUIOff()

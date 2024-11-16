@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6762028279362831362}
   - component: {fileID: 2663328862538190137}
   - component: {fileID: 5071532132723081616}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4970652279760957822}
   - component: {fileID: 9194050561662197514}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: AvatarUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 8234715255225554239}
   - component: {fileID: 6900968499901482092}
   - component: {fileID: 1224254461090299951}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: c2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 2883028577420505115}
   - component: {fileID: 61416543916544141}
   - component: {fileID: 4273641588559369387}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 1334392968177569351}
   - component: {fileID: 4889247489953808273}
   - component: {fileID: 5958671811850069254}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: dress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ GameObject:
   - component: {fileID: 3191440024514626027}
   - component: {fileID: 8224230608672534079}
   - component: {fileID: 2799755644573605781}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,7 +783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8072992172339348555}
   - component: {fileID: 8916401237248105593}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399671262524564264}
   - component: {fileID: 3481447640460773448}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,7 +917,7 @@ GameObject:
   - component: {fileID: 9167837859715744685}
   - component: {fileID: 4142725930317109654}
   - component: {fileID: 595765069545292146}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 1432088318745261264}
   - component: {fileID: 6095606463783372819}
   - component: {fileID: 1730326429993710862}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1125,7 +1125,7 @@ GameObject:
   - component: {fileID: 5272742873350682148}
   - component: {fileID: 6779250208349186085}
   - component: {fileID: 6443457169871170471}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1245,7 +1245,7 @@ GameObject:
   - component: {fileID: 6067953048164570483}
   - component: {fileID: 7386929119670779513}
   - component: {fileID: 265976839276417182}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: c1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1376,7 +1376,7 @@ GameObject:
   - component: {fileID: 1780915274350452217}
   - component: {fileID: 499744613315008143}
   - component: {fileID: 3432767032867683045}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1461,6 +1461,10 @@ PrefabInstance:
       value: Scroll_hat
       objectReference: {fileID: 0}
     - target: {fileID: 1548714348535813571, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548714348535813571, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1475,6 +1479,18 @@ PrefabInstance:
     - target: {fileID: 2831387552901995980, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_SizeDelta.y
       value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178831099255317342, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894191654590944841, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977481745545917204, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6430427542705121156, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1491,6 +1507,14 @@ PrefabInstance:
     - target: {fileID: 6456094756302883694, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: toggleable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658549233079878288, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166707859233759855, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7952737727948617765, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_Pivot.x
@@ -1610,6 +1634,10 @@ PrefabInstance:
       value: Scroll_glasses
       objectReference: {fileID: 0}
     - target: {fileID: 1548714348535813571, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548714348535813571, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1624,6 +1652,18 @@ PrefabInstance:
     - target: {fileID: 2831387552901995980, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_SizeDelta.y
       value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178831099255317342, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894191654590944841, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977481745545917204, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6430427542705121156, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1640,6 +1680,14 @@ PrefabInstance:
     - target: {fileID: 6456094756302883694, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: toggleable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658549233079878288, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166707859233759855, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7952737727948617765, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_Pivot.x
@@ -1759,6 +1807,10 @@ PrefabInstance:
       value: Scroll_hair
       objectReference: {fileID: 0}
     - target: {fileID: 1548714348535813571, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548714348535813571, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1778,9 +1830,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5178831099255317342, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5868498694768180921, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894191654590944841, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977481745545917204, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6430427542705121156, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1797,6 +1861,14 @@ PrefabInstance:
     - target: {fileID: 6456094756302883694, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: category
       value: hair
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658549233079878288, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166707859233759855, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7669511052388704494, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_Size
@@ -1924,6 +1996,10 @@ PrefabInstance:
       value: Scroll_face
       objectReference: {fileID: 0}
     - target: {fileID: 1548714348535813571, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548714348535813571, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1939,6 +2015,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: -15
       objectReference: {fileID: 0}
+    - target: {fileID: 5178831099255317342, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894191654590944841, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977481745545917204, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6430427542705121156, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.49999997
@@ -1950,6 +2038,14 @@ PrefabInstance:
     - target: {fileID: 6456094756302883694, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: category
       value: face
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658549233079878288, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166707859233759855, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7952737727948617765, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_Pivot.x
@@ -2069,6 +2165,10 @@ PrefabInstance:
       value: Scroll_dress
       objectReference: {fileID: 0}
     - target: {fileID: 1548714348535813571, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548714348535813571, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -2084,6 +2184,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5178831099255317342, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894191654590944841, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977481745545917204, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6430427542705121156, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -2095,6 +2207,14 @@ PrefabInstance:
     - target: {fileID: 6456094756302883694, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: category
       value: dress
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658549233079878288, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166707859233759855, guid: 78f45626722d279488f43a2f548d7004, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7952737727948617765, guid: 78f45626722d279488f43a2f548d7004, type: 3}
       propertyPath: m_Pivot.x

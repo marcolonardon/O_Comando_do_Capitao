@@ -5,7 +5,7 @@ using TMPro;
 
 public class PlayerRoleAssignment : MonoBehaviourPunCallbacks
 {
-    public TMP_Text roleText;
+    //public TMP_Text roleText;
     private string playerRole;
 
     void Start()
@@ -39,7 +39,7 @@ public class PlayerRoleAssignment : MonoBehaviourPunCallbacks
 
     private void DisplayRole()
     {
-        roleText.text = playerRole;
+        //roleText.text = playerRole;
     }
 
     public string GetPlayerRole()
@@ -50,7 +50,7 @@ public class PlayerRoleAssignment : MonoBehaviourPunCallbacks
     // Para atualizar o papel de jogadores, caso alguém saia e a lista mude
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
-        AssignRole();
-        DisplayRole();
+        //AssignRole();
+        //DisplayRole();
     }
 }

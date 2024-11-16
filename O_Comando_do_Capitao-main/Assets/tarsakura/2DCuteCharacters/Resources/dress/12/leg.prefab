@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2080723544868567980}
   - component: {fileID: 3746275437695056261}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +51,7 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

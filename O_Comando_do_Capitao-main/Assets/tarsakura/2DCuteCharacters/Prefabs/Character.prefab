@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112656290104698202}
   - component: {fileID: 112656290104698203}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +51,7 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -96,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112656290430487952}
   - component: {fileID: 112656290430487953}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,6 +138,7 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -182,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112656290445370940}
   - component: {fileID: 112656290445370941}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: dress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,6 +225,7 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -267,7 +270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 112656290473541882}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: handL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112656290559000657}
   - component: {fileID: 112656290559000686}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112656290560439820}
   - component: {fileID: 112656290560439821}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,6 +389,7 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -430,7 +434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 112656290766405361}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 112656290974577778}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +510,7 @@ GameObject:
   - component: {fileID: 112656291289869641}
   - component: {fileID: 1374332116796549993}
   - component: {fileID: 8522986652463014372}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,7 +623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 112656291415934828}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: handR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 112656291474986579}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: legL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112656291593084785}
   - component: {fileID: 112656291593084686}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,6 +729,7 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -770,7 +775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112656291671368849}
   - component: {fileID: 112656291671368878}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -811,6 +816,7 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -856,7 +862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112656291796263151}
   - component: {fileID: 112656291796263148}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,6 +903,7 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -941,7 +948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 112656291939866823}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: legR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -974,7 +981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8400217469573359310}
   - component: {fileID: 3275418383483295832}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1015,6 +1022,7 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1059,7 +1067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4570917169697640040}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: eyebrowR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1091,7 +1099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521761121219147157}
   - component: {fileID: 6928999216226907408}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,7 +1154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3566601034992201139}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: eyeL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1177,7 +1185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2376742630833431853}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: eyeR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,7 +1216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8423841592759062705}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1239,7 +1247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3367216406689259734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: eyebrowL
   m_TagString: Untagged
   m_Icon: {fileID: 0}

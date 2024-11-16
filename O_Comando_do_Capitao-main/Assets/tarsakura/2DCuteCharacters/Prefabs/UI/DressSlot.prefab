@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1045540641535462027}
   - component: {fileID: 9131553333902778482}
   - component: {fileID: 2196643019544772673}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: DressSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,6 @@ RectTransform:
   - {fileID: 1045540642966397154}
   - {fileID: 7585110392976054806}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -150,9 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 1045540642966397181}
   selected: {fileID: 1603036754792545228}
-  data:
-    type: 
-    index: 0
+  index: 0
   scroller: {fileID: 0}
 --- !u!1 &1045540642966397155
 GameObject:
@@ -166,7 +163,7 @@ GameObject:
   - component: {fileID: 1045540642966397180}
   - component: {fileID: 1045540642966397181}
   - component: {fileID: 5939607135693185776}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +183,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1045540641535462024}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -257,7 +253,7 @@ GameObject:
   - component: {fileID: 7585110392976054806}
   - component: {fileID: 1453932941355414172}
   - component: {fileID: 7260056810637092624}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Selected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +273,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1045540641535462024}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
