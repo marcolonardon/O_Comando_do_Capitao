@@ -34,7 +34,7 @@ public class Gameplay : MonoBehaviourPunCallbacks
 
     public void CaptainButton()
     {
-        if (IsCaptain())
+        if (IsCaptain() || IsSailor())
         {
             photonView.RPC("ShowSpeechBubble", RpcTarget.All, "Mensagem do Capitão");
             CaptainPlayButton.SetActive(false); // Desativa localmente o botão do Capitão
@@ -45,7 +45,7 @@ public class Gameplay : MonoBehaviourPunCallbacks
     [PunRPC]
     private void ShowSpeechBubble(string message)
     {
-        if (IsCaptain() || IsSailor())
+        if (IsCaptain())
         {
             Background.SetActive(true);
             CaptainCharacter.SetActive(true);
@@ -54,9 +54,22 @@ public class Gameplay : MonoBehaviourPunCallbacks
             NextSpeechButton.SetActive(true);
             //CaptainSpeechText.text = speechTexts[currentSpeechIndex];
         }
+        else if(IsSailor()) 
+        {
+            Background.SetActive(true);
+            CaptainCharacter.SetActive(false);
+
+            NextSpeechButton.SetActive(false);
+            WelcomeButton.SetActive(false);
+            
+        }
         else
         {
             Background.SetActive(false);
+            CaptainCharacter.SetActive(false);
+
+            NextSpeechButton.SetActive(false);
+            WelcomeButton.SetActive(false);
         }
     }
 

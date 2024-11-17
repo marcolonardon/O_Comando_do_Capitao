@@ -18,6 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/cena02.unity
     guid: bf8fd6ebba713154bb99b9830d6e7972
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: d894f8de3f4cf9b4cb4d45a36bdc6fd7, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: d2bc83d90da1f334c970977c652464bf, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 4f823502687b4904eb52379555ce086d, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

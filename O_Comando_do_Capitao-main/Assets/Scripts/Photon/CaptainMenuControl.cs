@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class CaptainMenuControl : MonoBehaviourPunCallbacks
 {
     public GameObject Background;
+    public GameObject ShowCaptain;
     public GameObject CaptainCharacter;
     public GameObject customizationMenu; // Referência ao GameObject do menu de personalização
     public GameObject roleText;
@@ -38,6 +39,7 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
         roleText.SetActive(true);
         Background.SetActive(true); 
 
+
         if (customizationMenu == null)
         {
             Debug.LogError("O GameObject customizationMenu não está atribuído!");
@@ -64,11 +66,13 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
         if (IsCaptain())
         {
             customizationMenu.SetActive(isCustomizationMenuActive); // Exibe o menu se for o capitão
+            ShowCaptain.SetActive(!isCustomizationMenuActive);
         }
         else
         {
             customizationMenu.SetActive(false); // Esconde o menu para todos os outros jogadores
             CaptainCharacter.SetActive(false);
+            ShowCaptain.SetActive(false);
         }
     }
 
