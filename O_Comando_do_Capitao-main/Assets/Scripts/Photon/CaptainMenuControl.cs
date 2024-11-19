@@ -8,11 +8,14 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
     public GameObject ShowCaptain;
     public GameObject CaptainCharacter;
     public GameObject customizationMenu; // Referência ao GameObject do menu de personalização
+    public GameObject CaptainsCommands;
     public GameObject roleText;
     public GameObject PlayButton;
     public Button toggleCustomizationButton; // Referência ao botão para ativar/desativar o menu de personalização
     public GameObject InitialButton;
     private bool isCustomizationMenuActive = false; // Estado inicial do menu
+
+    public GameObject sailor; // GameObject do Sailor
 
     // Variável para armazenar o ActorNumber do capitão
     private int captainActorNumber;
@@ -35,6 +38,8 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
 
     private void SetUI()
     {
+        CaptainsCommands.SetActive(false);
+        sailor.SetActive(false);
         CaptainCharacter.SetActive(false);
         roleText.SetActive(true);
         Background.SetActive(true); 

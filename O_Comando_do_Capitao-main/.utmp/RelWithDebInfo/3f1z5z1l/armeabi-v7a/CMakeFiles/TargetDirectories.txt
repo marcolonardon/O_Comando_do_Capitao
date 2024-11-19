@@ -1,0 +1,5 @@
+C:/O_Comando_do_Capitao/O_Comando_do_Capitao-main/.utmp/RelWithDebInfo/3f1z5z1l/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/O_Comando_do_Capitao/O_Comando_do_Capitao-main/.utmp/RelWithDebInfo/3f1z5z1l/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/O_Comando_do_Capitao/O_Comando_do_Capitao-main/.utmp/RelWithDebInfo/3f1z5z1l/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/O_Comando_do_Capitao/O_Comando_do_Capitao-main/.utmp/RelWithDebInfo/3f1z5z1l/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+C:/O_Comando_do_Capitao/O_Comando_do_Capitao-main/.utmp/RelWithDebInfo/3f1z5z1l/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir
