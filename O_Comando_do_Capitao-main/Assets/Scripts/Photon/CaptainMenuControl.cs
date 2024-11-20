@@ -12,6 +12,7 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
     public GameObject roleText;
     public GameObject PlayButton;
     public Button toggleCustomizationButton; // Referência ao botão para ativar/desativar o menu de personalização
+    public Button printCustomizationButton; // Referência ao botão para imprimir opções de personalização
     public GameObject InitialButton;
     private bool isCustomizationMenuActive = false; // Estado inicial do menu
 
@@ -42,8 +43,7 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
         sailor.SetActive(false);
         CaptainCharacter.SetActive(false);
         roleText.SetActive(true);
-        Background.SetActive(true); 
-
+        Background.SetActive(true);
 
         if (customizationMenu == null)
         {
@@ -61,6 +61,15 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
         else
         {
             toggleCustomizationButton.onClick.AddListener(ToggleCustomizationMenu);
+        }
+
+        if (printCustomizationButton == null)
+        {
+            Debug.LogError("O botão printCustomizationButton não está atribuído!");
+        }
+        else
+        {
+            printCustomizationButton.onClick.AddListener(PrintCustomizationOptions);
         }
 
         if (PlayButton != null)
@@ -98,6 +107,21 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
         }
 
         TurnUIOff();
+    }
+
+    // Método para imprimir as opções de personalização salvas no PlayerPrefs
+    public void PrintCustomizationOptions()
+    {
+        Debug.Log("Opções de personalização salvas nos PlayerPrefs:");
+        Debug.Log("Hair: " + PlayerPrefs.GetInt("Hair", -1));
+        Debug.Log("Hat: " + PlayerPrefs.GetInt("Hat", -1));
+        Debug.Log("Glasses: " + PlayerPrefs.GetInt("Glasses", -1));
+        Debug.Log("SkinColor: " + PlayerPrefs.GetInt("SkinColor", -1));
+        Debug.Log("Eyebrows: " + PlayerPrefs.GetInt("Eyebrows", -1));
+        Debug.Log("Eyes: " + PlayerPrefs.GetInt("Eyes", -1));
+        Debug.Log("Beard: " + PlayerPrefs.GetInt("Beard", -1));
+        Debug.Log("Cheek: " + (PlayerPrefs.GetInt("Cheek", 0) == 1 ? "Ativado" : "Desativado"));
+        Debug.Log("Dress: " + PlayerPrefs.GetInt("Dress", -1));
     }
 
     // Método que verifica se o jogador atual é o capitão

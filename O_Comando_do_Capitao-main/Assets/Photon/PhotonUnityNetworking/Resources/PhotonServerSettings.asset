@@ -45,6 +45,8 @@ MonoBehaviour:
   - SetWaitingForStartVisibility
   - ShowSpeechBubble
   - ShowStartButtonRPC
+  - SyncCaptainCharacterState
+  - ReceiveCharacterDataRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

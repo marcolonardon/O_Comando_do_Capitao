@@ -5602,7 +5602,7 @@ GameObject:
   - component: {fileID: 90199000}
   - component: {fileID: 90198999}
   m_Layer: 5
-  m_Name: Backgroung
+  m_Name: AdminBackgroung
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6338,6 +6338,7 @@ GameObject:
   - component: {fileID: 228192835}
   - component: {fileID: 228192836}
   - component: {fileID: 228192837}
+  - component: {fileID: 228192838}
   m_Layer: 0
   m_Name: PhotonManager
   m_TagString: Untagged
@@ -6436,6 +6437,7 @@ MonoBehaviour:
   roleText: {fileID: 592261904}
   PlayButton: {fileID: 367113706}
   toggleCustomizationButton: {fileID: 1502173019}
+  printCustomizationButton: {fileID: 0}
   InitialButton: {fileID: 564969041}
   sailor: {fileID: 1571228897}
 --- !u!114 &228192835
@@ -6578,6 +6580,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &228192838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228192828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3e2039a0af9c148aa24f53bbadf20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &238969717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8430,7 +8444,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 112656291289869643, guid: 81c5538d75f7a234b9585da1fa3d9cd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 645048457}
   m_SourcePrefab: {fileID: 100100000, guid: 81c5538d75f7a234b9585da1fa3d9cd2, type: 3}
 --- !u!4 &645048454 stripped
 Transform:
@@ -8442,12 +8459,39 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8522986652463014372, guid: 81c5538d75f7a234b9585da1fa3d9cd2, type: 3}
   m_PrefabInstance: {fileID: 645048453}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 645048456}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67ec8bd1bd44d8b44aecb3beb71592f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &645048456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 112656291289869643, guid: 81c5538d75f7a234b9585da1fa3d9cd2, type: 3}
+  m_PrefabInstance: {fileID: 645048453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &645048457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645048456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &718329644
 GameObject:
   m_ObjectHideFlags: 0
@@ -12157,7 +12201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1502173020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 228192838}
+        m_TargetAssemblyTypeName: PlayerDataSync, Assembly-CSharp
+        m_MethodName: SyncCharacterData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1502173020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14926,6 +14982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1917271264}
+  - component: {fileID: 1917271265}
   m_Layer: 3
   m_Name: CaptainCharacter
   m_TagString: Untagged
@@ -14953,6 +15010,28 @@ RectTransform:
   m_AnchoredPosition: {x: 81, y: 108}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1917271265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917271263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1924306032
 GameObject:
   m_ObjectHideFlags: 0
