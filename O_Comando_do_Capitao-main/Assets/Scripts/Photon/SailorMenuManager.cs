@@ -7,8 +7,6 @@ using System.Collections; // Necessário para utilizar IEnumerator
 public class SailorMenuManager : MonoBehaviourPunCallbacks
 {
     public GameObject sailor;
-    public GameObject MissionButton;
-    public TMP_Text MissionButtonText;
     public GameObject UnlockScreenButton;
     public TMP_Text UnlockScreenText;
     public GameObject BlockScreen;
@@ -35,20 +33,17 @@ public class SailorMenuManager : MonoBehaviourPunCallbacks
 
     private void SetUI()
     {
-        UnlockScreenText.text = "Desbloquear tablet";
         sailor.SetActive(false);
         CoinsAnimation.SetActive(false);
-        MissionButton.SetActive(false); // Botão "Iniciar Missão 1" começa desativado
+        UnlockScreenButton.SetActive(false);
         CompleteMissionButton.SetActive(false);
         CaptainsButtons.SetActive(false);
-        UnlockScreenButton.SetActive(false);
 
         if (IsSailor())
         {
             CaptainCharacter.SetActive(false);
             BlockScreen.SetActive(true);
             sailor.SetActive(true);
-            UnlockScreenButton.SetActive(true); // Botão "Desbloquear tablet" ativo para o Sailor
         }
         else
         {
@@ -56,39 +51,68 @@ public class SailorMenuManager : MonoBehaviourPunCallbacks
         }
     }
 
-    public void UnlockSailorScreen()
+    public void CompleteMission()
     {
-        if (IsSailor())
+        if (!isMissionOneCompleted)
         {
-            UnlockScreenButton.SetActive(false);  // Desativa o botão "Desbloquear tablet"
-            MissionButton.SetActive(true);       // Ativa o botão "Iniciar Missão 1"
-            MissionButtonText.text = "Iniciar Missão 1"; // Define o texto do botão
-            BlockScreen.SetActive(false);        // Remove o bloqueio da tela
-            CaptainCharacter.SetActive(true);    // Ativa o personagem do Capitão
+            // Concluir missão 1
+            UnlockScreenText.text = "Iniciar Missão 2";
+            CoinsAnimation.SetActive(true); // Ativa CoinsAnimation ao concluir a missão
+            PlayAudio(missionOneCompleteAudio); // Toca o áudio da conclusão da missão 1
+            StartCoroutine(DeactivateCoinsAnimationAfterDelay());
+            isMissionOneCompleted = true;
+            CompleteMissionButton.SetActive(false); // Oculta o botão após a conclusão da missão 1
+        }
+        else if (!isMissionTwoCompleted)
+        {
+            // Concluir missão 2
+            CoinsAnimation.SetActive(true); // Ativa CoinsAnimation ao concluir a missão
+            PlayAudio(missionTwoCompleteAudio); // Toca o áudio da conclusão da missão 2
+            StartCoroutine(DeactivateCoinsAnimationAfterDelay());
+            isMissionTwoCompleted = true;
+            UnlockScreenButton.SetActive(false); // Desativa o botão ao finalizar todas as missões
+            CompleteMissionButton.SetActive(false);
         }
     }
 
-
-    public void StartMissionButton()
+    // Método chamado pelo Capitão para mostrar o botão na tela do Sailor
+    public void ShowStartButton()
     {
-        if (IsSailor())
+        if (IsCaptain())
         {
-            MissionButton.SetActive(false); // Desativa o botão "Iniciar Missão 1" após ser clicado
-            StartMission(); // Inicia a lógica da missão
+            photonView.RPC("ShowStartButtonRPC", RpcTarget.Others); // Chama o RPC para mostrar o botão no Sailor
         }
     }
 
-    private void StartMission()
+    // RPC para mostrar o botão na tela do Sailor
+    [PunRPC]
+    private void ShowStartButtonRPC()
+    {
+        if (IsSailor())
+        {
+            UnlockScreenButton.SetActive(true);
+            UnlockScreenText.text = "Iniciar Missão 1";
+        }
+    }
+
+    public void StartMission()
     {
         if (IsSailor())
         {
             if (!isMissionOneCompleted)
             {
+                // Iniciar missão 1
+                BlockScreen.SetActive(false);
+                CaptainCharacter.SetActive(true);
+                CompleteMissionButton.SetActive(true); // Mostra o botão para finalizar missão 1
                 CompleteMissionButtonText.text = "Finalizar Missão 1"; // Define o texto para Missão 1
                 PlayAudio(missionOneStartAudio); // Toca o áudio da missão 1
+                CaptainsButtons.SetActive(false); // Desativa os botões do Capitão
             }
             else if (isMissionOneCompleted && !isMissionTwoCompleted)
             {
+                // Iniciar missão 2
+                BlockScreen.SetActive(false);
                 CompleteMissionButton.SetActive(true); // Mostra o botão para finalizar missão 2
                 CompleteMissionButtonText.text = "Finalizar Missão 2"; // Define o texto para Missão 2
                 PlayAudio(missionTwoStartAudio); // Toca o áudio da missão 2
@@ -107,7 +131,7 @@ public class SailorMenuManager : MonoBehaviourPunCallbacks
 
     private IEnumerator DeactivateCoinsAnimationAfterDelay()
     {
-        yield return new WaitForSeconds(7); // Define o tempo que a animação ficará ativa
+        yield return new WaitForSeconds(6); // Define o tempo que a animação ficará ativa
         CoinsAnimation.SetActive(false); // Desativa CoinsAnimation após o delay
     }
 
@@ -116,6 +140,7 @@ public class SailorMenuManager : MonoBehaviourPunCallbacks
         return PhotonNetwork.LocalPlayer == PhotonNetwork.PlayerList[1];
     }
 
+    // Método para identificar se o jogador atual é o Sailor (terceiro a conectar)
     private bool IsSailor()
     {
         return PhotonNetwork.LocalPlayer == PhotonNetwork.PlayerList[2];

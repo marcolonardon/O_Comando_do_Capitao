@@ -22,10 +22,11 @@ public class AdminMenuControl : MonoBehaviourPunCallbacks
     private bool isWaitingForStartVisible = false;
 
     private List<string> playerNames = new List<string>();
-    private List<string> remainingPlayers;
-
+    private List<string> remainingPlayers = new List<string>();
+    private System.Random random;
     void Start()
     {
+        random = new System.Random();
         SetUI();
         playerNameInput.onSelect.AddListener((text) =>
         {
@@ -34,7 +35,6 @@ public class AdminMenuControl : MonoBehaviourPunCallbacks
 
         playerGenderDropdown.value = 0;
         ShowAdminMenuForHost();
-        remainingPlayers = new List<string>();
     }
 
     private void SetUI()
@@ -143,19 +143,38 @@ public class AdminMenuControl : MonoBehaviourPunCallbacks
 
     private void SelectRandomCaptain()
     {
+        // Verifica se a lista de jogadores restantes está vazia
         if (remainingPlayers.Count == 0)
         {
-            remainingPlayers.AddRange(playerNames);
+            Debug.Log("Todos os jogadores foram escolhidos. Reiniciando...");
+
+            // Recarrega a lista de jogadores para reiniciar o processo
+            remainingPlayers = new List<string>(playerNames);
         }
 
-        if (remainingPlayers.Count > 0)
-        {
-            int randomIndex = Random.Range(0, remainingPlayers.Count);
-            string selectedCaptain = remainingPlayers[randomIndex];
-            remainingPlayers.RemoveAt(randomIndex);
-            SetCaptain(selectedCaptain);
-        }
+        // Exibe todos os jogadores restantes antes da seleção
+        Debug.Log("Jogadores disponíveis: " + string.Join(", ", remainingPlayers));
+
+        // Escolhe um índice aleatório da lista
+        int randomIndex = random.Next(remainingPlayers.Count);
+
+        // Pega o nome do jogador no índice escolhido
+        string chosenPlayer = remainingPlayers[randomIndex];
+
+        // Exibe o nome do jogador escolhido
+        Debug.Log("Jogador escolhido: " + chosenPlayer);
+
+        // Remove o jogador escolhido da lista
+        remainingPlayers.RemoveAt(randomIndex);
+
+        // Verifica a lista de jogadores restantes após a remoção
+        Debug.Log("Jogadores restantes após remoção: " + string.Join(", ", remainingPlayers));
+
+        // Chama a função para definir o capitão
+        SetCaptain(chosenPlayer);
     }
+
+
 
     private void SetCaptain(string captainName)
     {
@@ -194,8 +213,7 @@ public class AdminMenuControl : MonoBehaviourPunCallbacks
     {
         captainText.text = ""; // Reseta o texto do capitão
         WaitingForStart.SetActive(true); // Mostra o elemento de espera no início
-        remainingPlayers.Clear(); // Limpa os jogadores restantes
-        remainingPlayers.AddRange(playerNames); // Recarrega os jogadores
+
     }
 
 

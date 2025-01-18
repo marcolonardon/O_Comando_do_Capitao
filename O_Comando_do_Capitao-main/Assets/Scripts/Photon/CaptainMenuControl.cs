@@ -27,6 +27,11 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
         SetUI();
     }
 
+   //private void Update()
+   //{
+   //    PrintCustomizationOptions();
+   //}
+
     private void SetCaptain()
     {
         // Verifique se há ao menos dois jogadores conectados para definir o capitão como o segundo jogador
@@ -112,16 +117,17 @@ public class CaptainMenuControl : MonoBehaviourPunCallbacks
     // Método para imprimir as opções de personalização salvas no PlayerPrefs
     public void PrintCustomizationOptions()
     {
-        Debug.Log("Opções de personalização salvas nos PlayerPrefs:");
-        Debug.Log("Hair: " + PlayerPrefs.GetInt("Hair", -1));
-        Debug.Log("Hat: " + PlayerPrefs.GetInt("Hat", -1));
-        Debug.Log("Glasses: " + PlayerPrefs.GetInt("Glasses", -1));
-        Debug.Log("SkinColor: " + PlayerPrefs.GetInt("SkinColor", -1));
-        Debug.Log("Eyebrows: " + PlayerPrefs.GetInt("Eyebrows", -1));
-        Debug.Log("Eyes: " + PlayerPrefs.GetInt("Eyes", -1));
-        Debug.Log("Beard: " + PlayerPrefs.GetInt("Beard", -1));
-        Debug.Log("Cheek: " + (PlayerPrefs.GetInt("Cheek", 0) == 1 ? "Ativado" : "Desativado"));
-        Debug.Log("Dress: " + PlayerPrefs.GetInt("Dress", -1));
+       // Debug.Log("Opções de personalização salvas nos PlayerPrefs:");
+       // Debug.Log("Hair: " + PlayerPrefs.GetInt("Hair", -1));
+       // Debug.Log("Hat: " + PlayerPrefs.GetInt("Hat", -1));
+       // Debug.Log("Glasses: " + PlayerPrefs.GetInt("Glasses", -1));
+       // Debug.Log("SkinColor: " + PlayerPrefs.GetInt("SkinColor", -1));
+       // Debug.Log("Eyebrows: " + PlayerPrefs.GetInt("Eyebrows", -1));
+       // Debug.Log("Face: " + PlayerPrefs.GetInt("Face", -1));
+       // Debug.Log("Beard: " + PlayerPrefs.GetInt("Beard", -1));
+       // Debug.Log("Cheek: " + (PlayerPrefs.GetInt("Cheek", 0) == 1 ? "Ativado" : "Desativado"));
+       // Debug.Log("Dress: " + PlayerPrefs.GetInt("Dress", -1));
+        Debug.Log("GÊNERO:::: " + PlayerPrefs.GetString("Gender"));
     }
 
     // Método que verifica se o jogador atual é o capitão

@@ -22,10 +22,10 @@ namespace tarsakura {
 
         public void SetUpList() {
             var length = 0;
-            if(category == "face") length = 17;
-            else if(category == "hair") length = 33;
-            else if(category == "hat") length = 32;
-            else if(category == "glasses") length = 16;
+            if (category == "face") length = 3;
+            else if (category == "hair") length = 33;
+            else if (category == "hat") length = 32;
+            else if (category == "glasses") length = 16;
             else length = 33;
 
             if(length == slots.Count) return;

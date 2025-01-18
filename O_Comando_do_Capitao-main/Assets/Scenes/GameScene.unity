@@ -6373,8 +6373,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sailor: {fileID: 1571228897}
-  MissionButton: {fileID: 1694933895}
-  MissionButtonText: {fileID: 1643102239}
   UnlockScreenButton: {fileID: 385475287}
   UnlockScreenText: {fileID: 1548870712}
   BlockScreen: {fileID: 1479519050}
@@ -7700,7 +7698,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 228192836}
         m_TargetAssemblyTypeName: SailorMenuManager, Assembly-CSharp
-        m_MethodName: UnlockSailorScreen
+        m_MethodName: StartMission
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14397,7 +14395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1694933896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14464,7 +14462,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 228192836}
         m_TargetAssemblyTypeName: SailorMenuManager, Assembly-CSharp
-        m_MethodName: StartMissionButton
+        m_MethodName: StartMission
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16313,7 +16311,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947678848}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.008727774, z: -0, w: 0.9999619}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16322,10 +16320,10 @@ RectTransform:
   - {fileID: 294727990}
   - {fileID: 1554469583}
   m_Father: {fileID: 2066419897}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -1, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.0014038086, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947678850

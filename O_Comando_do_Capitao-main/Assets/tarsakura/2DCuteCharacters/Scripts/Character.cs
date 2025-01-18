@@ -13,7 +13,7 @@ namespace tarsakura
         public List<BodySpriteSet> bodySets;
 
         GameObject dress, hair, handR, handL, legR, legL, hat, beard, cheek, eyebrowR, eyebrowL, eyeR, eyeL, glasses;
-        int dressIndex, hairIndex, skinColorIndex, hatIndex, beardIndex, eyebrowsIndex, eyesIndex, glassesIndex;
+        int faceIndex, dressIndex, hairIndex, skinColorIndex, hatIndex, beardIndex, eyebrowsIndex, eyesIndex, glassesIndex;
         bool cheeckValue;
 
         private void Start()
@@ -34,11 +34,18 @@ namespace tarsakura
             PlayerPrefs.GetInt("Beard", 0);
             PlayerPrefs.GetInt("Cheek", 0);
             PlayerPrefs.GetInt("Dress", 0);
+            PlayerPrefs.GetInt("Face", 0);
+            PlayerPrefs.GetString("Gender", "male");
+
+         
         }
 
         private void LoadCharacter()
         {
             // Carregar valores salvos no PlayerPrefs ou usar valores padrão
+            string savedGender = PlayerPrefs.GetString("Gender", "male");
+            gender = (Gender)System.Enum.Parse(typeof(Gender), savedGender);
+            faceIndex = PlayerPrefs.GetInt("Face", defaultPreset.face);
             hairIndex = PlayerPrefs.GetInt("Hair", defaultPreset.hair);
             hatIndex = PlayerPrefs.GetInt("Hat", defaultPreset.hat);
             glassesIndex = PlayerPrefs.GetInt("Glasses", defaultPreset.glasses);
@@ -60,9 +67,18 @@ namespace tarsakura
             Beard = beardIndex;
             Cheek = cheeckValue;
             Hat = hatIndex;
-            Glasses = glassesIndex;
+            Glasses = glassesIndex;//setar face????
         }
 
+        public Gender CharacterGender
+        {
+            set
+            {
+                gender = value;
+                PlayerPrefs.SetString("Gender", value.ToString().ToLower());
+            }
+            get { return gender; }
+        }
         public int Hair
         {
             set
@@ -239,6 +255,8 @@ namespace tarsakura
             get { return dressIndex; }
         }
     }
+
+
 
     [System.Serializable]
     public class BodySpriteSet
